@@ -1,0 +1,15 @@
+{
+    "name": "Transform Upper Case",
+    "version": "1.0",
+    "description": "This is a test of a Chrome Extension, it will transform your text to upper case and copy the content to the memory.",
+    "icons": {
+            "16": "upper-case16.png",
+            "32": "upper-case32.png",
+            "128": "upper-case128.png" 
+             },
+    "browser_action": {
+        "default_popup": "index.html"
+    },
+    
+    "manifest_version": 2
+}
