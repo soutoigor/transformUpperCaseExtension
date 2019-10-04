@@ -1,24 +1,17 @@
-var text = document.getElementById('toTransform');
+const $text = document.getElementById('toTransform')
+const $btnTransform = document.getElementById('transform')
+const $textTransformed = document.getElementById('transformed')
+const $btnCopy = document.getElementById('copy')
 
-var btnTransform = document.getElementById('transform');
+$btnTransform.addEventListener('click', () => {
+   $textTransformed.textContent = $text.value.toUpperCase() 
+})
 
-var textTransformed = document.getElementById('transformed');
-
-var btnCopy = document.getElementById('copy');
-
-
-btnTransform.addEventListener('click', function(){
-   textTransformed.textContent = text.value.toUpperCase(); 
-});
-
-btnCopy.addEventListener('click', function(){
-   
-    textTransformed.select();
-    
-    document.execCommand("copy");
-    
-    document.getElementById("alert").style.display = "block";
-    
-    setTimeout(function(){document.getElementById("alert").style.display = "none";},1500);
-    
-});
+$btnCopy.addEventListener('click', () => {
+    $textTransformed.select()
+    document.execCommand('copy')
+    document.getElementById('alert').style.display = 'block'
+    setTimeout(() => {
+        document.getElementById('alert').style.display = 'none'
+    }, 1500)
+})
